@@ -1,0 +1,19 @@
+# name -> event -> jobs -> runner -> steps
+# cron is a property for time based job scheduling used for job automation. Used in Linux/Unix/GitHub Action; In Simple alarm
+# cron: stands for command run-on: minutes (0-59), hours (0-23), date (1-31), months (1-12), week (0-6)
+
+
+name: Scheduled Workflow
+
+on:
+  schedule:
+    - cron: "*/5 * * * *" # Run every five minutes
+
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Notify
+        run: echo "Scheduled Workflow"
