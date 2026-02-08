@@ -8,6 +8,7 @@ name: Scheduled Workflow
 on:
   schedule:
     - cron: "*/5 * * * *" # Run every five minutes
+  workflow_dispatch: # Allow manual triggering
 
 
 jobs:
